@@ -1,2 +1,12 @@
-<h1>Members#index</h1>
-<p>Find me in app/views/members/index.html.erb</p>
+<h1>Members</h1>
+<ul>
+<% for member in @members %>
+
+	<li id="member_<%= member.id %>">
+		<%= member.first %> <%= member.last %>
+		| <%= link_to 'Edit', edit_member_path(member) %>
+		| <%= link_to 'Delete', member, :method => 'delete' %>
+	</li>
+
+<% end %>
+</ul>

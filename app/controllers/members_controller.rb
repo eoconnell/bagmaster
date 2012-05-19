@@ -1,5 +1,6 @@
 class MembersController < ApplicationController
   def index
+    @members = Member.all
   end
 
   def create
@@ -12,5 +13,7 @@ class MembersController < ApplicationController
   end
 
   def destroy
+    Member.destroy params[:id]
+    redirect_to :back, :notice => 'Member has been deleted.'
   end
 end
