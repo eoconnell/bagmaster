@@ -1,0 +1,11 @@
+<%= form_for @member do |f| %>
+	<%= f.label :first %>
+	<%= f.text_field :first %>
+	<%= f.label :last %>
+	<%= f.text_field :last %>
+	<%= f.label :male %>
+	<%= f.radio_button :sex, "Male" %>
+	<%= f.label :female %>
+	<%= f.radio_button :sex, "Female" %>
+	<%= f.submit %>
+<% end %>
