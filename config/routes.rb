@@ -1,35 +1,5 @@
 Bagmaster::Application.routes.draw do
 
-  # get "slots/index"
-
-  # get "slots/create"
-
-  # get "slots/edit"
-
-  # get "slots/update"
-
-  # get "slots/destroy"
-
-  # get "bags/index"
-
-  # get "bags/create"
-
-  # get "bags/edit"
-
-  # get "bags/update"
-
-  # get "bags/destroy"
-
-  # get "members/index"
-
-  # get "members/create"
-
-  # get "members/edit"
-
-  # get "members/update"
-
-  # get "members/destroy"
-
   resources :members, :bags, :slots
 
   # The priority is based upon order of creation:
