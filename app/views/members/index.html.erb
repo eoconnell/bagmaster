@@ -1,7 +1,5 @@
 <h1>Members</h1>
 
-<%= link_to 'Create New Member', new_member_path %>
-
 <ul>
 <% for member in @members %>
 
@@ -13,3 +11,6 @@
 
 <% end %>
 </ul>
+
+
+<%= link_to 'Create New Member', new_member_path, :class => 'button' %>

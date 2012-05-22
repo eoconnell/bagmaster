@@ -5,7 +5,7 @@ class MembersController < ApplicationController
 
   def create
     Member.create params[:member]
-    redirect_to members_path, :notice => 'Member has been created.'
+    redirect_to members_path, :flash => { :success => 'Member has been created.' }
   end
 
   def new
@@ -20,7 +20,7 @@ class MembersController < ApplicationController
     member = Member.find params[:id]
 
     if member.update_attributes params[:member]
-      redirect_to members_path, :notice => 'Member has been updated successfully.'
+      redirect_to members_path, :flash => { :success => 'Member has been updated successfully.' }
     else
       redirect_to :back, :flash => { :error => 'There was an error updating this member.' }
     end
@@ -28,6 +28,6 @@ class MembersController < ApplicationController
 
   def destroy
     Member.destroy params[:id]
-    redirect_to :back, :notice => 'Member has been deleted.'
+    redirect_to :back, :flash => { :success => 'Member has been deleted.' }
   end
 end

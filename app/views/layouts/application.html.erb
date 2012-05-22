@@ -7,14 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<% flash.each do |name, message| %>
-	<div id="flash_<%= name %>">
-		<%= message %>
+	<header>
+	<div class="container">
+		<h1>Bag Master</h1>
+		<nav>
+			<ul>
+				<li><%= link_to 'Members', members_path %></li>
+				<li><%= link_to 'Bags', bags_path %></li>
+				<li><%= link_to 'Storage Slots', slots_path %></li>
+			</ul>
+		</nav>
 	</div>
-<% end %>
+	</header>
+	<div class="container">
 
-<%= yield %>
+		<% flash.each do |name, message| %>
+			<div id="flash_<%= name %>">
+				<%= message %>
+			</div>
+		<% end %>
 
+		<%= yield %>
+
+	</div>
 </body>
 </html>

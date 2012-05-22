@@ -1,5 +1,7 @@
 Bagmaster::Application.routes.draw do
 
+  root :to => 'Members#index'
+
   resources :members, :bags, :slots
 
   # The priority is based upon order of creation:
