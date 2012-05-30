@@ -1,16 +1,33 @@
 <h1>Members</h1>
 
-<ul>
-<% for member in @members %>
+<% initial = nil %>
 
-	<li id="member_<%= member.id %>">
-		<%= member.first %> <%= member.last %>
+<table>
+	<thead>
+		<tr><th>First</th><th>Last</th><th></th></tr>
+	</thead>
+<% for member in @members %>
+<% 
+	if initial != member.last[0,1]
+		initial = member.last[0,1]
+%>
+	<thead>
+		<tr><th><%= initial %></th></tr>
+	</thead>
+	<tbody>
+<% end %>
+	
+	<tr id="member_<%= member.id %>" class="<%= member.sex %>">
+		<td><%= member.first %></td>
+		<td><%= member.last %></td>
+		<td>
 		| <%= link_to 'Edit', edit_member_path(member) %>
-		| <%= link_to 'Delete', member, :method => 'delete' %>
-	</li>
+		| <%= link_to 'Delete', member, :method => 'delete' %></td>
+	</tr>
 
 <% end %>
-</ul>
+	</tbody>
+</table>
 
 
 <%= link_to 'Create New Member', new_member_path, :class => 'button' %>

@@ -20,16 +20,16 @@ body {
 }
 
 .container {
-    margin: auto;
-    width: 940px;
+	margin: auto;
+	width: 940px;
 }
 
 header {
-    background-color: #008253;
-    height: 75px;
-    line-height: 75px;
-    color: white;
-    vertial-align: middle;
+	background-color: #008253;
+	height: 75px;
+	line-height: 75px;
+	color: white;
+	vertial-align: middle;
 }
 	header h1 {
 		display: inline;
@@ -41,7 +41,7 @@ header {
 	header nav {
 		float: right;
 		font-size: 14px;
-        font-weight: bold;
+		font-weight: bold;
 	}
 	nav a, nav a:visited {
 		color: white;
@@ -50,7 +50,7 @@ header {
 		cursor: pointer;
 	}
 	nav a:active {
-		background: #004A2F;
+		box-shadow: 0px 5px #004A2F;
 	}
 	nav ul {
 		list-style: none;
@@ -80,6 +80,42 @@ input[type="text"], input[type="submit"], input[type="button"] {
 	margin-bottom: 15px;
 }
 
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 24px;
+}
+
+th,
+td {
+	padding: 8px;
+	line-height: 24px;
+	text-align: left;
+	vertical-align: top;
+	border-top: 1px solid black;
+}
+th {
+	font-weight: bold;
+}
+thead th {
+	vertical-align: bottom;
+}
+thead tr:first-child th,
+thead tr:first-child td,
+thead tr:first-child th,
+thead tr:first-child td,
+thead:first-child tr:first-child th,
+thead:first-child tr:first-child td {
+	border-top: 0;
+}
+tbody {
+	border-top: 2px solid black;
+}
+
+tr.Female {
+	background: yellow;
+}
 
 #flash_notice {
 	border: 1px solid #7A7A7A;

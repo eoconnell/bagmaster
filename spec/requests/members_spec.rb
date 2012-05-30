@@ -40,7 +40,7 @@ describe "Members" do
   end
 
   describe "PUT /members" do
-    it "edits a member" do
+    it "should update a valid member" do
       visit members_path
       click_link 'Edit'
 
@@ -66,6 +66,8 @@ describe "Members" do
       visit members_path
       click_link 'Edit'
 
+      current_path.should == edit_member_path(@member)
+
       fill_in 'First', :with => ''
       click_button 'Update Member'
 
@@ -76,6 +78,8 @@ describe "Members" do
     it "should not update a member without a last name" do
       visit members_path
       click_link 'Edit'
+
+      current_path.should == edit_member_path(@member)
 
       fill_in 'Last', :with => ''
       click_button 'Update Member'
