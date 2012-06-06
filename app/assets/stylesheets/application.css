@@ -34,7 +34,7 @@ header {
 	header h1 {
 		display: inline;
 		font-family: 'Ubuntu';
-		font-size: 45px;
+		font-size: 26px;
 		font-style: italic;
 	}
 
@@ -50,17 +50,21 @@ header {
 		cursor: pointer;
 	}
 	nav a:active {
-		box-shadow: 0px 5px #004A2F;
+		box-shadow: -5px 0px #004A2F;
 	}
 	nav ul {
 		list-style: none;
 		margin: 0px;
+		padding: 0px;
 	}
 	nav li {
 		float: left;
 		margin-left: 10px;
 		text-align: center;
 		width: 150px;
+	}
+	nav li:first-child {
+		margin-left: 0px;
 	}
 	nav li:hover {
 		background: #005737;
@@ -115,6 +119,16 @@ tbody {
 
 tr.Female {
 	background: yellow;
+}
+
+table.grid {
+	background: lightgrey;
+}
+
+table.grid td {
+	border: 1px solid black;
+	background: white;
+	text-align: center;
 }
 
 #flash_notice {

@@ -1,0 +1,26 @@
+<h1>Bag List</h1>
+
+<% initial = nil %>
+
+<table>
+
+<% for bag in @bags %>
+
+<% 
+	if initial != bag.member.last[0,1]
+		initial = bag.member.last[0,1]
+%>
+	<thead>
+		<tr><th><%= initial %></th></tr>
+	</thead>
+	<tbody>
+	<% end %>
+
+<tr class="<%= bag.member.sex %>">
+	<td><%=bag.member.last %>, <%=bag.member.first %></td>
+	<td><%=bag.slot.name %></td>
+</tr>
+
+<% end %>
+	</tbody>
+</table>

@@ -1,5 +1,9 @@
 Bagmaster::Application.routes.draw do
 
+  get "reports/baglist"
+
+  get "reports/openslots"
+
   root :to => 'Members#index'
 
   resources :members, :bags, :slots

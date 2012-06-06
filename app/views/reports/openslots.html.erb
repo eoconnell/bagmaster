@@ -1,0 +1,19 @@
+<h1>Storage Slots</h1>
+
+<table class="grid">
+
+<% for slot in @slots %>
+
+<tr><td><%= slot.name %></td>
+	
+	<% for bag in slot.bags %>
+
+	<td><%= bag.member.first %> <%= bag.member.last %></td>
+
+	<% end %>
+
+</tr>
+
+<% end %>
+
+</table>

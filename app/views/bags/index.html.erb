@@ -1,2 +1,25 @@
-<h1>Bags#index</h1>
-<p>Find me in app/views/bags/index.html.erb</p>
+<h1>Bags</h1>
+
+<table>
+	<thead>
+		<tr><th>Slot</th><th>Member</th><th>Make</th><th>Color</th><th></th></tr>
+	</thead>
+	<tbody>
+<% for bag in @bags %>
+
+	<tr id="bag_<%= bag.id %>">
+		<td><%=	bag.slot.name %></td>
+		<td><%=	bag.member.first %> <%=	bag.member.last %></td>
+		<td><%= bag.make %></td>
+		<td><%= bag.color %></td>
+		<td>
+		| <%= link_to 'Edit', edit_bag_path(bag) %>
+		| <%= link_to 'Delete', bag, :method => 'delete' %></td>
+	</tr>
+
+<% end %>
+	</tbody>
+</table>
+
+
+<%= link_to 'Create New Bag', new_bag_path, :class => 'button' %>

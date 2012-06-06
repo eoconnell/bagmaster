@@ -12,6 +12,8 @@
 		<h1>Bag Master</h1>
 		<nav>
 			<ul>
+				<li><%= link_to 'Bag List', :controller => 'reports', :action => 'baglist' %></li>
+				<li><%= link_to 'Open Slots', :controller => 'reports', :action => 'openslots' %></li>
 				<li><%= link_to 'Members', members_path %></li>
 				<li><%= link_to 'Bags', bags_path %></li>
 				<li><%= link_to 'Storage Slots', slots_path %></li>
